@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Bob Familiar</key>
+	<string>http://about.me/bobfamiliar</string>
+	<key>Jesse Freeman</key>
+	<string>http://www.jessefreeman.com/</string>
+	<key>Maria Naggaga</key>
+	<string>http://blogs.msdn.com/b/maria_naggaga/</string>
+	<key>Stacey Mulcahy</key>
+	<string>http://thebitchwhocodes.com/</string>
+	<key>Jim O&apos;Neil</key>
+	<string>http://blogs.msdn.com/b/jimoneil/</string>
+	<key>Michael Cummings</key>
+	<string>http://geekswithblogs.net/Mathoms/Default.aspx</string>
+	<key>Chris Bowen</key>
+	<string>http://blogs.msdn.com/b/cbowen/</string>
+	<key>David Isbitski</key>
+	<string>http://blogs.msdn.com/b/davedev/</string>
+	<key>Lindsay Lindstrom</key>
+	<string>http://blogs.msdn.com/b/lindsay/</string>
+	<key>G.Andrew Duthie</key>
+	<string>http://devhammer.net/</string>
+	<key>Brian Hitney</key>
+	<string>http://www.structuretoobig.com/</string>
+	<key>Tara Walker</key>
+	<string>http://blogs.msdn.com/b/tarawalker/</string>
+	<key>Diego Rivera</key>
+	<string>http://insomnesagresivos.blogspot.com/</string>
+	<key>Joe Healy</key>
+	<string>http://www.devfish.net/</string>
+	<key>Blain Barton</key>
+	<string>http://blogs.technet.com/b/blainbar/</string>
+	<key>Yung Chou</key>
+	<string>http://blogs.technet.com/b/yungchou/</string>
+	<key>Dan Stolts</key>
+	<string>http://itproguru.com/</string>
+	<key>Bob Hunt</key>
+	<string>http://blogs.technet.com/b/bobh/</string>
+	<key>Tommy Patterson</key>
+	<string>http://virtuallycloud9.com/</string>
+</dict>
+</plist>
