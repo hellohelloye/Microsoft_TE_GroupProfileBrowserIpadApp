@@ -8,6 +8,7 @@
 
 #import "TEGroupMemberInforDetailViewController.h"
 #import <Twitter/Twitter.h>
+#import "popOverTweetFromTwitterViewController.h"
 
 @interface TEGroupMemberInforDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -15,7 +16,8 @@
 @end
 
 @implementation TEGroupMemberInforDetailViewController
-@synthesize webProfileView;   ////////////////ADD BY SELF
+@synthesize webProfileView,popover;
+
 
 #pragma mark - Managing the detail item
 
@@ -78,9 +80,7 @@
         NSLog(@"Cannot tweet ! Disabling button");
         self.tweetButton.enabled = FALSE;
     }
-    
-    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
-    
+    TWTweetComposeViewController *tweetViewController=[[TWTweetComposeViewController alloc] init];    
     [tweetViewController setInitialText:@"HelloHelloYe. Tweet From IOS6 Ipad simulator."];
     [tweetViewController addURL:[NSURL URLWithString:@"http://www.apple.com"]];
     
@@ -97,14 +97,70 @@
             default:
                 break;
         }
-        
      [self dismissModalViewControllerAnimated:YES];
-        
-     }];
-    
-    [self presentModalViewController:tweetViewController animated:YES];
-    
+     }];    
+    [self presentModalViewController:tweetViewController animated:YES];    
 }
+/*
+-(void)getTweetFromTwitter
+{
+    NSURL *searchURL = [NSURL URLWithString:@"http://search.twitter.com/search.json"];
+    NSDictionary *params = [NSDictionary dictionaryWithObject:@"bobfamiliar" forKey:@"q"];
+    TWRequest *req = [[TWRequest alloc] initWithURL:searchURL
+                                         parameters:params
+                                      requestMethod:TWRequestMethodGET];
+    [req performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                options:NSJSONReadingMutableLeaves
+                                                                  error:&error];
+        NSDictionary *allTweets = [results objectForKey:@"results"];
+        NSLog(@"All Tweets: %@",allTweets);
+    }];
+}*/
+
+
+- (IBAction)getDataFromTwitter:(id)sender {
+    
+    NSURL *searchURL = [NSURL URLWithString:@"http://search.twitter.com/search.json"];
+    NSDictionary *params = [NSDictionary dictionaryWithObject:@"bobfamiliar" forKey:@"q"];
+    TWRequest *req = [[TWRequest alloc] initWithURL:searchURL
+                                         parameters:params
+                                      requestMethod:TWRequestMethodGET];
+    [req performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                options:NSJSONReadingMutableLeaves
+                                                                  error:&error];
+        NSDictionary *allTweets = [results objectForKey:@"results"];
+        NSLog(@"All Tweets: %@",allTweets);
+    }];
+}
+/*›
+    if([popover isPopoverVisible]) {
+        [popover dismissPopoverAnimated:YES];
+    }else{
+        popOverTweetFromTwitterViewController *popTweets = [[popOverTweetFromTwitterViewController alloc] init];
+        popover = [[UIPopoverController alloc] initWithContentViewController:popTweets];
+        popover.popoverContentSize = CGSizeMake(250, 250);
+        [popover presentPopoverFromBarButtonItem:sender
+                        permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }*/
+    
+
+
+
+/*
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([sender isKindOfClass:[popOverTweetFromTwitterViewController class]]){
+            if([segue.identifier isEqualToString:@"ShowImage"]){
+                if([segue.destinationViewController respondsToSelector:@selector(setImageURL:)]){
+                    NSURL *url = @"http://b72.photo.store.qq.com/psu?/289887743/qldH*gLHXOy46Tu8HkJJdJabaxPgoEmX7pIvlge9hfg!/b/YWQD9SpCMgAAYqvp7ioUMwAA&bo=gALgAQAAAAABAEQ!";
+                    [segue.destinationViewController performSelector:@selector(setImageURL:)withObject:url];
+                }
+            }
+        }
+}
+*/
 
 
 @end

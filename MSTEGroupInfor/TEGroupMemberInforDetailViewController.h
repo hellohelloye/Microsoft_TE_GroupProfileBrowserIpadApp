@@ -14,9 +14,17 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *getProfileImageDataFromTwitterButton;
+
 @property (weak, nonatomic) IBOutlet UIWebView *webProfileView; 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *tweetButton;
+
+@property (nonatomic,retain) UIPopoverController *popover;
+
 - (IBAction)tweetButtonPressed:(id)sender;
+
+//-(void)getTweetFromTwitter;
+- (IBAction)getDataFromTwitter:(id)sender;
 
 @end
 

@@ -21,6 +21,8 @@
 		09278ED4175878EB00FA52BC /* TEGroupMemberInforMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09278ED3175878EB00FA52BC /* TEGroupMemberInforMasterViewController.m */; };
 		09278ED7175878EB00FA52BC /* TEGroupMemberInforDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09278ED6175878EB00FA52BC /* TEGroupMemberInforDetailViewController.m */; };
 		09278EDE1758792900FA52BC /* TEInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09278EDD1758792900FA52BC /* TEInformation.plist */; };
+		0933A0EF175AE5E200F90429 /* popOverTweetFromTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0933A0EE175AE5E200F90429 /* popOverTweetFromTwitterViewController.m */; };
+		0933A0F3175B0A5100F90429 /* TwitterProfileImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0933A0F2175B0A5100F90429 /* TwitterProfileImageViewController.m */; };
 		09A64A061758BC6B003A767D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A64A051758BC6B003A767D /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,10 @@
 		09278ED5175878EB00FA52BC /* TEGroupMemberInforDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEGroupMemberInforDetailViewController.h; sourceTree = "<group>"; };
 		09278ED6175878EB00FA52BC /* TEGroupMemberInforDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEGroupMemberInforDetailViewController.m; sourceTree = "<group>"; };
 		09278EDD1758792900FA52BC /* TEInformation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TEInformation.plist; sourceTree = "<group>"; };
+		0933A0ED175AE5E200F90429 /* popOverTweetFromTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popOverTweetFromTwitterViewController.h; sourceTree = "<group>"; };
+		0933A0EE175AE5E200F90429 /* popOverTweetFromTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popOverTweetFromTwitterViewController.m; sourceTree = "<group>"; };
+		0933A0F1175B0A5100F90429 /* TwitterProfileImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterProfileImageViewController.h; sourceTree = "<group>"; };
+		0933A0F2175B0A5100F90429 /* TwitterProfileImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterProfileImageViewController.m; sourceTree = "<group>"; };
 		09A64A051758BC6B003A767D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,10 @@
 				09278ED3175878EB00FA52BC /* TEGroupMemberInforMasterViewController.m */,
 				09278ED5175878EB00FA52BC /* TEGroupMemberInforDetailViewController.h */,
 				09278ED6175878EB00FA52BC /* TEGroupMemberInforDetailViewController.m */,
+				0933A0ED175AE5E200F90429 /* popOverTweetFromTwitterViewController.h */,
+				0933A0EE175AE5E200F90429 /* popOverTweetFromTwitterViewController.m */,
+				0933A0F1175B0A5100F90429 /* TwitterProfileImageViewController.h */,
+				0933A0F2175B0A5100F90429 /* TwitterProfileImageViewController.m */,
 				09278EBB175878EB00FA52BC /* Supporting Files */,
 			);
 			path = MSTEGroupInfor;
@@ -195,6 +205,8 @@
 				09278EC5175878EB00FA52BC /* TEGroupMemberInforAppDelegate.m in Sources */,
 				09278ED4175878EB00FA52BC /* TEGroupMemberInforMasterViewController.m in Sources */,
 				09278ED7175878EB00FA52BC /* TEGroupMemberInforDetailViewController.m in Sources */,
+				0933A0EF175AE5E200F90429 /* popOverTweetFromTwitterViewController.m in Sources */,
+				0933A0F3175B0A5100F90429 /* TwitterProfileImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
